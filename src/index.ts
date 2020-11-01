@@ -2,7 +2,6 @@ import {ExtensionContext, services, workspace, LanguageClient, TransportKind} fr
 
 export async function activate(context: ExtensionContext): Promise<void> {
   const config = workspace.getConfiguration().get<any>('grammarly', {}) as any
-  if (!config.enable) return
   const serverOptions = {
     // TODO: Somehow this has to be embedded
     module: "/Users/gianarb/git/grammarly/out/server.js",
