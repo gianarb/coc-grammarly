@@ -10,15 +10,7 @@ Currently I have a problem releasing my code because of this issue
 
 ## Install
 
-<!--`:CocInstall coc-grammarly`-->
-
-## Keymaps
-
-<!--`nmap <silent> <C-l> <Plug>(coc-coc-grammarly-keymap)`-->
-
-## Lists
-
-<!--`:CocList demo_list`-->
+`:CocInstall coc-grammarly`
 
 ## License
 
