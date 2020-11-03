@@ -4,6 +4,9 @@ import {resolve} from 'path';
 export async function activate(context: ExtensionContext): Promise<void> {
   const config = workspace.getConfiguration().get<any>('grammarly', {}) as any
   let serverModule = resolve(context.extensionPath, 'lib', 'server')
+  if (config.pathGrammarlyLSP != undefined) {
+    serverModule = config.pathGrammarlyLSP
+  }
   const serverOptions = {
     module: serverModule,
     transport: TransportKind.ipc,

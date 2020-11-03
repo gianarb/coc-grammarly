@@ -12,6 +12,13 @@ Currently I have a problem releasing my code because of this issue
 
 `:CocInstall coc-grammarly`
 
+## Configuration
+
+`grammarly.pathGrammarlyLSP` starts a different grammarly language server. This
+is useful in development, if you want to try a difference version of
+[grammarly](https://github.com/znck/grammarly). Example:
+`/Users/john/git/grammarly/out/newversion`
+
 ## License
 
 MIT
