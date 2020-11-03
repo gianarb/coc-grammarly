@@ -1,10 +1,11 @@
 import {ExtensionContext, services, workspace, LanguageClient, TransportKind} from 'coc.nvim'
+import {resolve} from 'path';
 
 export async function activate(context: ExtensionContext): Promise<void> {
   const config = workspace.getConfiguration().get<any>('grammarly', {}) as any
+  let serverModule = resolve(context.extensionPath, 'lib', 'server')
   const serverOptions = {
-    // TODO: Somehow this has to be embedded
-    module: "/Users/gianarb/git/grammarly/out/server.js",
+    module: serverModule,
     transport: TransportKind.ipc,
     options: {
       cwd: workspace.root,

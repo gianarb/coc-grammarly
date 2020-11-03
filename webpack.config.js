@@ -1,4 +1,5 @@
 const path = require('path');
+const CopyPlugin = require('copy-webpack-plugin');
 
 /** @type {import('webpack').Configuration} */
 module.exports = {
@@ -41,6 +42,11 @@ module.exports = {
     libraryTarget: 'commonjs'
   },
   plugins: [
+    new CopyPlugin({
+      patterns: [
+        {from: 'dist/server.js', to: 'server.js'},
+      ],
+    }),
   ],
   node: {
     __dirname: false,
