@@ -16,7 +16,20 @@ export async function activate(context: ExtensionContext): Promise<void> {
     }
   }
   const clientOptions = {
-    documentSelector: ['markdown', 'md'],
+    documentSelector: [
+      'asciidoc',
+      'git-commit',
+      'git-rebase',
+      'json',
+      'latex',
+      'markdown',
+      'mdx',
+      'plaintext',
+      'restructuredtext',
+    ],
+    synchronize: {
+      configurationSection: 'grammarly',
+    },
   }
   const client = new LanguageClient(
     'coc-grammarly', // the id
