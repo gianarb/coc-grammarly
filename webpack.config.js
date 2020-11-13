@@ -1,10 +1,11 @@
 const path = require('path');
-const CopyPlugin = require('copy-webpack-plugin');
+//const CopyPlugin = require('copy-webpack-plugin');
 
 /** @type {import('webpack').Configuration} */
 module.exports = {
   entry: {
     index: './src/index.ts',
+    server: './src/server.ts',
   },
   target: 'node',
   mode: 'none',
@@ -38,15 +39,15 @@ module.exports = {
   },
   output: {
     path: path.join(__dirname, 'lib'),
-    filename: 'index.js',
+    filename: '[name].js',
     libraryTarget: 'commonjs'
   },
   plugins: [
-    new CopyPlugin({
-      patterns: [
-        {from: 'dist/server.js', to: 'server.js'},
-      ],
-    }),
+    //new CopyPlugin({
+    //patterns: [
+    //{from: 'dist/server.js', to: 'server.js'},
+    //],
+    //}),
   ],
   node: {
     __dirname: false,

@@ -65,5 +65,8 @@
     "vscode-test": "^0.4.3",
     "webpack": "^4.44.1",
     "webpack-cli": "^3.3.12"
+  },
+  "dependencies": {
+    "unofficial-grammarly-language-server": "0.0.0"
   }
 }
