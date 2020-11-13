@@ -19,6 +19,21 @@ is useful in development, if you want to try a difference version of
 [grammarly](https://github.com/znck/grammarly). Example:
 `/Users/john/git/grammarly/out/newversion`
 
+## Development
+
+The command you use to build the project
+
+```
+npm run build
+```
+
+If you want to start the Coc extension from your working directory you can use
+`set`, where `~/git/coc-grammarly/` is the root of the project
+
+```
+set runtimepath^=~/git/coc-grammarly/
+```
+
 ## License
 
 MIT
