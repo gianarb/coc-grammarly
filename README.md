@@ -1,10 +1,5 @@
 # coc-grammarly
 
-NOTE: This project is an attempt to learn how coc and language server work. I
-have no idea about what I am doing and [apparently at this
-point](https://github.com/gianarb/coc-grammarly/issues/8) this coc plugin starts
-but it does not do anything for some reason
-
 coc-grammarly uses [grammary](https://github.com/znck/grammarly) and
 it acts as a bridge between [Grammarly](https://www.grammarly.com/) and vim.
 

@@ -1,1 +1,3 @@
-import 'unofficial-grammarly-language-server'
+import {startLanguageServer} from 'unofficial-grammarly-language-server'
+
+startLanguageServer()
