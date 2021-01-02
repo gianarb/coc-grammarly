@@ -14,7 +14,9 @@ module.exports = {
     extensions: ['.js', '.ts']
   },
   externals: {
-    'coc.nvim': 'commonjs coc.nvim'
+    'coc.nvim': 'commonjs coc.nvim',
+    bufferutil: "bufferutil",
+    "utf-8-validate": "utf-8-validate"
   },
   optimization: {
     minimize: true
