@@ -1,4 +1,4 @@
-import {ExtensionContext, services, workspace, LanguageClient, TransportKind} from 'coc.nvim'
+import {ExtensionContext, services, workspace, LanguageClient, TransportKind, LanguageClientOptions, ServerOptions} from 'coc.nvim'
 import {resolve} from 'path';
 
 export async function activate(context: ExtensionContext): Promise<void> {
@@ -7,7 +7,7 @@ export async function activate(context: ExtensionContext): Promise<void> {
   if (config.pathGrammarlyLSP != undefined) {
     serverModule = config.pathGrammarlyLSP
   }
-  const serverOptions = {
+  const serverOptions: ServerOptions = {
     module: serverModule,
     transport: TransportKind.ipc,
     options: {
@@ -15,18 +15,8 @@ export async function activate(context: ExtensionContext): Promise<void> {
       execArgv: config.execArgv || []
     }
   }
-  const clientOptions = {
-    documentSelector: [
-      'asciidoc',
-      'git-commit',
-      'git-rebase',
-      'json',
-      'latex',
-      'markdown',
-      'mdx',
-      'plaintext',
-      'restructuredtext',
-    ],
+  const clientOptions: LanguageClientOptions = {
+    documentSelector: config.filetypes,
     synchronize: {
       configurationSection: 'grammarly',
     },
@@ -39,5 +29,3 @@ export async function activate(context: ExtensionContext): Promise<void> {
   )
   context.subscriptions.push(services.registLanguageClient(client))
 }
-
-
