@@ -1,6 +1,6 @@
 {
   "name": "coc-grammarly",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "",
   "author": "Gianluca Arbezzano <gianarb92@gmail.com>",
   "license": "MIT",
@@ -11,20 +11,26 @@
   "engines": {
     "coc": "^0.0.77"
   },
-  "activationEvents": [
-    "onLanguage:plaintext",
-    "onLanguage:markdown",
-    "onLanguage:mdx",
-    "onCommand:grammarly.login",
-    "onCommand:grammarly.logout",
-    "onCommand:grammarly.stop",
-    "onCommand:grammarly.check",
-    "onCommand:grammarly.setGoals"
-  ],
   "contributes": {
     "configuration": {
       "title": "Grammarly",
       "properties": {
+        "grammarly.filetypes": {
+          "description": "List of filetypes which that trigger the extension.",
+          "scope": "resource",
+          "type": "array",
+          "default": [
+            "asciidoc",
+            "git-commit",
+            "git-rebase",
+            "json",
+            "tex",
+            "markdown",
+            "mdx",
+            "plaintext",
+            "restructuredtext"
+          ]
+        },
         "grammarly.autoActivate": {
           "scope": "resource",
           "type": "boolean",
