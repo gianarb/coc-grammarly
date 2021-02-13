@@ -21,14 +21,15 @@
           "type": "array",
           "default": [
             "asciidoc",
-            "git-commit",
-            "git-rebase",
+            "gitcommit",
+            "gitrebase",
             "json",
             "tex",
+            "plaintex",
+            "context",
             "markdown",
-            "mdx",
-            "plaintext",
-            "restructuredtext"
+            "text",
+            "rst"
           ]
         },
         "grammarly.autoActivate": {
