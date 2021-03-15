@@ -27,5 +27,10 @@ export async function activate(context: ExtensionContext): Promise<void> {
     serverOptions,
     clientOptions
   )
+
+  client.onReady().then(() => {
+    client.onRequest("$/updateDocumentState", () => {})
+  })
+
   context.subscriptions.push(services.registLanguageClient(client))
 }
