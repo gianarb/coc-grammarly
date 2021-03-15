@@ -388,7 +388,7 @@
     "rimraf": "^3.0.2",
     "ts-loader": "^8.0.12",
     "typescript": "^3.9.7",
-    "vscode": "^1.1.37",
+    "vscode": "^0.9.9",
     "vscode-languageserver": "7.0.0-next.3",
     "vscode-test": "^0.4.3",
     "webpack": "^4.44.1",
